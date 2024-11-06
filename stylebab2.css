@@ -229,5 +229,60 @@ a:hover {
     text-decoration: underline;
 }
  
-/*halaman2*/
+/*toasts*/
+/* Posisi container tombol di kanan atas */
+.toast-container {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    z-index: 2;
+}
+
+/* Styling untuk elemen toast lebih kecil dan muncul di bawah tombol */
+#toast {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px;
+    position: absolute;
+    top: 140px; /* Tepat di bawah tombol */
+    left: 0;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* Animasi untuk toast */
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+
+
+
+
 

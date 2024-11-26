@@ -230,7 +230,7 @@ a:hover {
 }
  
 /*toasts*/
-/* Posisi container tombol di kanan atas */
+
 .toast-container {
     position: fixed;
     top: 70px;
@@ -280,6 +280,32 @@ a:hover {
     from {opacity: 1;}
     to {opacity: 0;}
 }
+/*popup
+    /* CSS untuk tombol PopUp Boxes dengan ukuran lebih kecil */
+    .popup-container {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000; /* Pastikan tombol berada di atas elemen lainnya */
+        display: flex;
+        flex-direction: column; /* Susunan vertikal */
+        gap: 8px; /* Jarak antar tombol */
+    }
+
+    .popup-container button {
+        padding: 5px 10px; /* Ukuran padding lebih kecil */
+        font-size: 14px; /* Ukuran teks lebih kecil */
+        background-color: #007BFF; /* Warna latar tombol */
+        color: white; /* Warna teks */
+        border: none;
+        border-radius: 3px; /* Sudut tombol lebih kecil */
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .popup-container button:hover {
+        background-color: #0056b3;
+    }
 
 
 

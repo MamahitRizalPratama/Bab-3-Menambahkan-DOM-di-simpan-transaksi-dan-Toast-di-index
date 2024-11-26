@@ -37,6 +37,42 @@
     <!-- Elemen toast -->
     <div id="toast" class="toast"></div>
 
+    <!-- Tombol tambahan untuk PopUp Boxes -->
+    <div class="popup-container" style="margin: 20px;">
+        <button onclick="showAlert()">Tampilkan Alert</button>
+        <button onclick="showConfirm()">Tampilkan Confirm</button>
+        <button onclick="showPrompt()">Tampilkan Prompt</button>
+    </div>
+
+    <!-- JavaScript -->
     <script src="toasts.js"></script>
+    <script>
+        // Fungsi untuk menampilkan Alert Box
+        function showAlert() {
+            alert("Ini adalah Alert Box. Nikmati pengalaman berbelanja Anda!");
+        }
+
+        // Fungsi untuk menampilkan Confirm Box
+        function showConfirm() {
+            const result = confirm("Apakah Anda yakin ingin melanjutkan ke halaman rekomendasi?");
+            if (result) {
+                alert("Anda memilih untuk melanjutkan!");
+                // Redirect ke halaman rekomendasi
+                window.location.href = "halaman2.html";
+            } else {
+                alert("Anda membatalkan tindakan.");
+            }
+        }
+
+        // Fungsi untuk menampilkan Prompt Box
+        function showPrompt() {
+            const name = prompt("Silakan masukkan nama Anda:");
+            if (name) {
+                alert(`Halo, ${name}! Selamat berbelanja di Mountain Adventure.`);
+            } else {
+                alert("Anda tidak memasukkan nama.");
+            }
+        }
+    </script>
 </body>
 </html>
